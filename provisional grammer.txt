@@ -1,0 +1,35 @@
+START SYMBOL -> Program
+
+Type -> Int
+         -> Bool
+        -> String
+        -> Char
+Int -> [0..9]+
+Char -> ([a..z] | [0...9] | [A..Z] )
+String -> Char *
+Bool -> (True | False)
+id -> [a..z] (String)
+
+Program -> Statement*
+Statement -> print( Exp ) ;
+Staetment -> id = Exp ;
+Statement -> VarDecl  = Exp
+Statetment -> VarDecl;
+
+VarDecl -> Type id
+
+Exp -> Exp op Exp
+Exp -> INTEGER_LITERAL
+-> true
+-> false
+-> id
+-> ! exp
+-> (Exp)
+->
+-> " String"
+
+op -> + ,*, &, |
+Int x;
+x = 4;
+x = x + 1
+print(x);
